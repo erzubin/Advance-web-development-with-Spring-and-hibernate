@@ -1,0 +1,16 @@
+package springmvc.web.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class Student_Controller {
+	
+	@RequestMapping(value={"/Student/Student.html"})
+    public String staff( )
+    {
+        return "Student/Student";
+    }
+
+
+}

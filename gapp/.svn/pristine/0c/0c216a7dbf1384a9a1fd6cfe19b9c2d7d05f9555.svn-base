@@ -1,0 +1,39 @@
+package springmvc.model.dao.jpa;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+import org.springframework.stereotype.Repository;
+
+import springmvc.model.Application;
+import springmvc.model.Department;
+import springmvc.model.dao.ApplicationDao;
+
+
+	
+	@Repository
+	public class ApplicationImpl implements ApplicationDao {
+
+		 @PersistenceContext
+		    private EntityManager entityManager;
+
+		
+		@Override
+		public int getApplication(String username) {
+			
+			
+			List<Application> app = entityManager.createQuery( "select c from Application c join c.members i where i.email = :email", Application.class )
+					.setParameter("email", username + "@localhost.localdomain").getResultList();
+			
+			
+			return app.size();
+		}
+
+		
+		
+		
+
+	}
+	

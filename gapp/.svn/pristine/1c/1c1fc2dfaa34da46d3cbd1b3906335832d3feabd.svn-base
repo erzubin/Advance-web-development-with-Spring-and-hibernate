@@ -1,0 +1,67 @@
+package springmvc.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
+public class Degree_of_University {
+	@Id
+	@GeneratedValue
+	private int id;
+	
+	private String name_of_college;
+	
+	private int starting_year;
+	
+	private int end_year;
+	
+    private String major;
+    
+    private String name_of_degree;
+
+	public String getName_of_college() {
+		return name_of_college;
+	}
+
+	public void setName_of_college(String name_of_college) {
+		this.name_of_college = name_of_college;
+	}
+
+	public int getStarting_year() {
+		return starting_year;
+	}
+
+	public void setStarting_year(int starting_year) {
+		this.starting_year = starting_year;
+	}
+
+	public int getEnd_year() {
+		return end_year;
+	}
+
+	public void setEnd_year(int end_year) {
+		this.end_year = end_year;
+	}
+
+	public String getMajor() {
+		return major;
+	}
+
+	public void setMajor(String major) {
+		this.major = major;
+	}
+
+	public String getName_of_degree() {
+		return name_of_degree;
+	}
+
+	public void setName_of_degree(String name_of_degree) {
+		this.name_of_degree = name_of_degree;
+	}
+    
+    
+    
+    
+
+}

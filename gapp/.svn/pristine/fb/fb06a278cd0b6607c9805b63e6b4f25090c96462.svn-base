@@ -1,0 +1,28 @@
+package springmvc.model.dao.jpa;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+import org.springframework.stereotype.Repository;
+
+import springmvc.model.Department;
+import springmvc.model.dao.DepartmentDao;
+
+@Repository
+public class DepartmentImpl implements DepartmentDao {
+	 @PersistenceContext
+	    private EntityManager entityManager;
+
+	@Override
+	public List<Department> getDepartment() {
+		// TODO Auto-generated method stub
+		List<Department>  d = (List<Department>) entityManager.createQuery("from Department", Department.class).getResultList();
+	
+	
+		return d;
+	}
+
+	
+}

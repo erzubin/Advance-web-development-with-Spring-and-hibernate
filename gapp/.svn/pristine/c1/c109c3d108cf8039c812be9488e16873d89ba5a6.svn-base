@@ -1,0 +1,32 @@
+package springmvc.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+@Entity
+public class Program {
+	
+	@Id
+    @GeneratedValue
+    private Integer id;
+
+	private String program_name;
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getProgram_name() {
+		return program_name;
+	}
+
+	public void setProgram_name(String program_name) {
+		this.program_name = program_name;
+	}
+
+	
+}

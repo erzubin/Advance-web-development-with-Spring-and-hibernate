@@ -1,0 +1,11 @@
+package springmvc.model.dao;
+
+import springmvc.model.Members;
+import springmvc.model.Users;
+
+public interface RegDao {
+
+	
+	Members setMembers(Members member);
+	Users getUser(int id);
+}
